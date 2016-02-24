@@ -1,11 +1,11 @@
 ---
-layout: drafts-index
-title: All draftss
-description: "An archive of draftss."
+layout: post-index
+title: All drafts
+description: "An archive of drafts."
 comments: false
 ---
 
-{% for drafts in site.draftss %}
+{% for draft in site.drafts %}
     {% capture this_year %}{{ drafts.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ drafts.previous.date | date: "%Y" }}{% endcapture %}
 
@@ -15,7 +15,7 @@ comments: false
       <ul>
     {% endif %}
 
-        <li class="entry-title"><a href="{{ site.url }}{{ drafts.url }}" title="{{ drafts.title }}">{{ drafts.title }}</a></li>
+        <li class="entry-title"><a href="{{ site.url }}{{ draft.url }}" title="{{ draft.title }}">{{ draft.title }}</a></li>
 
     {% if forloop.last %}
       </ul>
