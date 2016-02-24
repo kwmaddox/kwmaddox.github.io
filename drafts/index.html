@@ -6,8 +6,8 @@ comments: false
 ---
 
 {% for draft in site.drafts %}
-    {% capture this_year %}{{ drafts.date | date: "%Y" }}{% endcapture %}
-    {% capture next_year %}{{ drafts.previous.date | date: "%Y" }}{% endcapture %}
+    {% capture this_year %}{{ draft.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ draft.previous.date | date: "%Y" }}{% endcapture %}
 
     {% if forloop.first %}
     <article>
